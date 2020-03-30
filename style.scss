@@ -8,6 +8,11 @@
 
 html {
   font-size: 62.5%; // 1rem=10px;  10/16=62.5%
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 55%;
+  }
 }
 
 body {
@@ -16,6 +21,7 @@ body {
   // font-family: 'Tangerine', cursive;
 }
 
+// main-container #####################################
 .main-container {
   margin: auto;
   width: 80vw;
@@ -25,8 +31,18 @@ body {
   text-align: center;
   border-radius: 1.5rem;
   overflow: hidden;
+  position: relative;
+
+  @media only screen and (max-width: 1200px) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 95vw;
+  }
 }
 
+// form #######################################
 .form {
   display: grid;
   justify-items: center;
@@ -40,12 +56,21 @@ body {
   backdrop-filter: blur(10px);
   color: #5610ed;
 
+  @media only screen and (max-width: 900px) {
+    grid-row-gap: 0;
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
 
   &__heading {
     font-size: 6rem;
     margin: 3rem;
     font-family: 'Tangerine', cursive;
     font-weight: 700;
+
+    @media only screen and (max-width: 900px) {
+      margin: 2rem;
+    }
   }
 
   &__group {
@@ -55,8 +80,8 @@ body {
   }
 
   &__input {
-    padding: 1rem;
-    font-size: 2rem;
+    padding: 2rem;
+    font-size: 2.5rem;
     display: block;
     font-family: inherit;
     color: inherit;
@@ -64,6 +89,11 @@ body {
     border: none;
     transition: all .4s;
     border-bottom: 3px solid transparent;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1.5rem;
+      font-size: 2rem;
+    }
 
     &:focus {
       outline: none;
@@ -127,9 +157,23 @@ body {
     font-size: 3rem;
     display: flex;
     justify-content: space-around;
-    background-color: #84d4e014  ;
+    background-color: #778ca3  ;
     padding: .5rem 0;
     margin: 0 1rem;
+
+    @media only screen and (max-width: 900px) {
+      &:nth-child(even) {
+        margin-left: 2rem;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 2rem;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin: 0 2rem;
+    }
 
     .iNumber {
       color: blue;
@@ -143,36 +187,38 @@ body {
 
     .answer {
       font-size: 3rem;
-      border: 1px solid yellow;
+      // border: 1px solid #fd9644;
+      border: 1px solid #45aaf2;
       display: block;
       background-color: inherit;
       width: 50%;
       color: #fff;
       text-align: center;
+
+      &:focus {
+        // background-color: #4b7bec;
+        background-color: #fd9644;
+      }
     }
   }
 }
 
-
-.ali {
-  color: green;
-}
-
-
-
-
-
 // check button ##########################################
 .submitQuestionsButton-container {
-  // justify-self: center;
-  // width: 30%;
-  background: #777;
+  background-color: #777;
   display: flex;
   justify-content: center;
   padding: 6rem;
   display: none;
-}
 
+  @media only screen and (max-width: 900px) {
+    transform: translateY(-.2rem);
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 4rem;
+  }
+}
 
 .submitQuestionsButton {
   display: block;
@@ -184,7 +230,211 @@ body {
   margin: auto;
 }
 
+.submitQuestionsNote {
+  background-color: #d1d8e0;
+  color: #4b7bec;
+  font-size: 3rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: none;
 
+  @media only screen and (max-width: 600px) {
+    padding: 1.4rem;
+    font-size: 2.2rem;
+  }
+}
+
+// New practice ###############################################
+.newPractice {
+  background-color: #777;
+  display: none;
+  transform: translateY(-1rem);
+  &__link {
+    font-size: 3rem;
+    text-decoration: none;
+    background-color: #fed330;
+    display: inline-block;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      font-size: 3rem;
+      text-decoration: none;
+      background-color: #fed330;
+      display: inline-block;
+      padding: 2rem 5rem;
+      border-radius: 1rem;
+      margin-bottom: 5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: newPracticeButton 1s infinite;
+    }
+  }
+}
+
+@keyframes newPracticeButton {
+  0% {
+    transform: scaleX(1) scaleY(1);
+      opacity: 1;
+    }
+
+  100% {
+    transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+}
+
+// formMistake ###########################################
+.formMistake {
+  background-color: rgba(0,0,0, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  -moz-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  height: 100vh;
+  transform: translateY(-100%);
+  transition: all .4s;
+
+  &__elements-container {
+    background-color: #d1d8e0;
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 5rem;
+    color: #fd9644;
+    font-size: 2.5rem;
+    box-shadow: 0 1rem 2rem #fd9644;
+
+    @media only screen and (max-width: 90px) {
+      width: 80%;
+      font-size: 2.5rem;
+      padding: 3rem 2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 2rem;
+      padding: 3rem 1rem;
+    }
+  }
+
+
+  &__text {
+    padding: 2rem;
+    font-size: 3rem;
+
+    @media only screen and (max-width: 900px) {
+      padding: 1.5rem;
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 1.5rem 3.5rem;
+    display: inline-block;
+    background-color: #a55eea;
+    border-radius: 3px;
+    color: currentColor;
+    font-size: inherit;
+    margin: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// checkAnswersPopup #####################################
+.checkAnswersPopup {
+  opacity: 0;
+  background-color: rgba(0,0,0, .8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  -moz-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: all .4s;
+
+  &__elements-container {
+    background-color: #d1d8e0;
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 5rem;
+    color: #fd9644;
+    font-size: 2.5rem;
+    box-shadow: 0 1rem 2rem #fd9644;
+    line-height: 1.6;
+
+    @media only screen and (max-width: 900px) {
+      padding: 5rem 3rem;
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 2rem;
+      width: 90%;
+    }
+  }
+
+
+  &__text {
+    padding: 2rem;
+    font-size: 3rem;
+
+    @media only screen and (max-width: 600px) {
+      padding: 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 1.5rem 3.5rem;
+    display: inline-block;
+    background-color: #a55eea;
+    border-radius: 3px;
+    color: currentColor;
+    font-size: inherit;
+    margin: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 2.5rem;
+      padding: 2rem 5rem;
+    }
+  }
+}
+
+// general input styling
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

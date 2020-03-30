@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i|Tangerine:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="style.css" type="text/css">
   <title>Math</title>
 </head>
 <body>
 
   <div class="main-container">
-    <form action="#" class="form">
+    <form action="#" class="form" id="form">
       <div class="">
         <h2 class="form__heading">Math Practice</h2>
       </div>
@@ -31,11 +32,42 @@
       </div>
     </form>
 
-    <div class="questions-container"></div>
+    <div class="questions-container" id="questions-container"></div>
 
     <div class="submitQuestionsButton-container">
       <button class="submitQuestionsButton">Finish</button>
+      <p class="submitQuestionsNote"></p>
     </div>
+
+    <div class="newPractice" id="newPractice">
+      <a href="#form" class="newPractice__link animated">New Practice</a>
+    </div>
+
+    <!-- formMistake -->
+    <div class="formMistake" id="formMistake">
+      <div class="formMistake__elements-container">
+        <p class="formMistake__text animated bounceInRight delay-2s">Please fill out the form first!</p>
+        <button class="formMistake__button animated lightSpeedIn delay-3s">OK</button>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="checkAnswersPopup" id="checkAnswersPopup">
+      <div class="checkAnswersPopup__elements-container">
+        <p class="checkAnswersPopup__text animated bounceInRight delay-2s">
+          Now you have the possibility to correct your wrong Answers
+          or just start a new Practice!
+        </p>
+        <button class="checkAnswersPopup__button animated lightSpeedIn delay-3s">OK</button>
+      </div>
+    </div>
+
+    <!-- <h1 class="animated infinite bounce delay-2s">Example</h1>
+    lightSpeedIn
+    zoomOutUp
+    bounceInRight
+    fadeOutRight
+   -->
 
   </div>
 
