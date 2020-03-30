@@ -46,8 +46,8 @@ btn.addEventListener('click', ev => {
 
   } else {
     if (formMistakeButtonNotClicked) {
+      formMistake.style.opacity= '1';
       formMistake.style.transform= 'translateY(0)';
-      form.style.opacity= '.1';
     }
 
   }
@@ -95,14 +95,13 @@ btn.addEventListener('click', ev => {
 
   // formMistakeButton
   formMistakeButton.addEventListener('click', ev => {
-    formMistake.style.transform= 'translateY(-100%)';
+    formMistake.style.transform= 'translateY(-120%)';
     form.style.opacity= '1';
-    // formMistakeButtonNotClicked= false;
   })
 
   // checkAnswersPopupButton
   checkAnswersPopupButton.addEventListener('click', ev => {
-  
+
     newPracticeLink.style.opacity= '1';
     newPracticeLink.classList.add('bounceInRight', 'delay-1s');
 
