@@ -96,12 +96,16 @@ body {
     display: block;
     border: none;
     font-size: 3rem;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 1rem;
     color: inherit;
-    background-color: cyan; }
+    background-color: cyan;
+    text-transform: uppercase; }
     .form__btn:hover {
       cursor: pointer; }
+    @media only screen and (max-width: 600px) {
+      .form__btn {
+        font-size: 2rem; } }
 
 .questions-container {
   margin-top: 5rem;
@@ -238,7 +242,6 @@ body {
     width: 70%;
     margin: auto;
     border-radius: 5px;
-    text-transform: uppercase;
     padding: 5rem;
     color: #fd9644;
     font-size: 2.5rem;
@@ -262,7 +265,7 @@ body {
         font-size: 2.5rem; } }
     @media only screen and (max-width: 600px) {
       .formMistake__text {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 1rem; } }
   .formMistake__button {
     border: none;
@@ -296,7 +299,6 @@ body {
     width: 70%;
     margin: auto;
     border-radius: 5px;
-    text-transform: uppercase;
     padding: 5rem;
     color: #fd9644;
     font-size: 2.5rem;

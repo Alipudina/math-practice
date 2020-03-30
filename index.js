@@ -23,7 +23,7 @@ btn.addEventListener('click', ev => {
   submitQuestionsNote.style.display= 'none';
 
   if (name.length>2 && quantity) {
-    questionsContainer.innerHTML= `<h3 class="form__heading">Hello ${name}</h3>`;
+    questionsContainer.innerHTML= `<h3 class="form__heading">Hallo ${name}</h3>`;
 
     for (let i=1; i<=quantity; i++) {
       let firstNumber= Math.ceil(Math.random() * 10);
@@ -80,7 +80,7 @@ btn.addEventListener('click', ev => {
       }
 
     }
-    let noteText= `Your Note is <b>${studentNote}</b> from <b>${allQuestions}</b>`;
+    let noteText= `Deine Note ist <b>${studentNote}</b> von <b>${allQuestions}</b>`;
     submitQuestionsNote.innerHTML= noteText;
     submitQuestionsNote.style.display= 'block';
   })
