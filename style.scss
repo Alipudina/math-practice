@@ -308,7 +308,7 @@ body {
   -moz-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
   height: 50vh;
-  transform: translateY(100%);
+  transform: translateY(-120%);
   transition: all .4s;
 
   &__elements-container {

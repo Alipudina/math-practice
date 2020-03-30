@@ -45,11 +45,8 @@ btn.addEventListener('click', ev => {
     window.location.href='#questions-container';
 
   } else {
-    if (formMistakeButtonNotClicked) {
-      formMistake.style.opacity= '1';
       formMistake.style.transform= 'translateY(0)';
-    }
-
+      // window.location.href='#form__heading';
   }
 })
 
