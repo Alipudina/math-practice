@@ -111,6 +111,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 3rem; }
+  @media only screen and (max-width: 600px) {
+    .questions-container {
+      margin-top: 1rem; } }
   .questions-container h3 {
     grid-column: 1 / -1;
     color: cyan; }
