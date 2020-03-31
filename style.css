@@ -17,15 +17,16 @@ body {
   font-family: 'Lato', sans-serif; }
 
 .main-container {
-  margin: auto;
+  margin: 2rem auto;
   width: 80vw;
-  margin-top: 2rem;
+  margin-bottom: 0;
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
   border-radius: 1.5rem;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-color: #4b7bec; }
   @media only screen and (max-width: 1200px) {
     .main-container {
       width: 90vw; } }
@@ -173,6 +174,9 @@ body {
   border-radius: 1rem;
   background-color: cyan;
   margin: auto; }
+  @media only screen and (max-width: 600px) {
+    .submitQuestionsButton {
+      padding: 1.5rem 3rem; } }
 
 .submitQuestionsNote {
   background-color: #d1d8e0;
@@ -234,7 +238,7 @@ body {
   z-index: 5;
   -moz-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
-  height: 50vh;
+  height: 100vh;
   transform: translateY(-120%);
   transition: all .4s; }
   .formMistake__elements-container {
@@ -246,7 +250,7 @@ body {
     color: #fd9644;
     font-size: 2.5rem;
     box-shadow: 0 1rem 2rem #fd9644; }
-    @media only screen and (max-width: 90px) {
+    @media only screen and (max-width: 900px) {
       .formMistake__elements-container {
         width: 80%;
         font-size: 2.5rem;
@@ -255,7 +259,8 @@ body {
       .formMistake__elements-container {
         width: 90%;
         font-size: 2rem;
-        padding: 3rem 1rem; } }
+        padding: 3rem 1rem;
+        height: 50vh; } }
   .formMistake__text {
     padding: 2rem;
     font-size: 3rem; }
@@ -334,6 +339,50 @@ body {
       .checkAnswersPopup__button {
         font-size: 2.5rem;
         padding: 2rem 5rem; } }
+
+.footer {
+  background-color: #333;
+  font-size: 1.5rem;
+  color: #f7f7f7;
+  padding: 5rem 0; }
+  @media only screen and (max-width: 900px) {
+    .footer {
+      transform: translateY(-0.2rem);
+      padding-top: 4rem; } }
+  @media only screen and (max-width: 600px) {
+    .footer {
+      padding: 3rem 0;
+      padding-top: 2rem; } }
+  .footer__logo {
+    font-size: 13rem;
+    color: #7ed56f;
+    margin: 3rem; }
+    @media only screen and (max-width: 900px) {
+      .footer__logo {
+        font-size: 10rem; } }
+    @media only screen and (max-width: 600px) {
+      .footer__logo {
+        font-size: 7rem; } }
+  .footer__copyright {
+    width: 70%;
+    margin: auto;
+    line-height: 1.6; }
+    @media only screen and (max-width: 900px) {
+      .footer__copyright {
+        width: 80%; } }
+    @media only screen and (max-width: 600px) {
+      .footer__copyright {
+        width: 90%; } }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    background-color: #333;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+    .footer__link:link:hover, .footer__link:visited:hover {
+      transform: scale(1.2) rotate(10deg);
+      color: #7ed56f; }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
