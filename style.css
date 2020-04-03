@@ -248,7 +248,7 @@ body {
     margin: auto;
     border-radius: 5px;
     padding: 5rem;
-    color: #fd9644;
+    color: #333;
     font-size: 2.5rem;
     box-shadow: 0 1rem 2rem #fd9644; }
     @media only screen and (max-width: 900px) {
@@ -281,7 +281,12 @@ body {
     border-radius: 3px;
     color: currentColor;
     font-size: inherit;
-    margin: 1rem; }
+    margin: 1rem;
+    transition: all .2s; }
+    .formMistake__button:hover {
+      background-color: #262626;
+      color: #fd9644;
+      cursor: pointer; }
     .formMistake__button:focus {
       outline: none; }
 
@@ -306,7 +311,7 @@ body {
     margin: auto;
     border-radius: 5px;
     padding: 5rem;
-    color: #fd9644;
+    color: #333;
     font-size: 2.5rem;
     box-shadow: 0 1rem 2rem #fd9644;
     line-height: 1.6; }
@@ -333,7 +338,12 @@ body {
     border-radius: 3px;
     color: currentColor;
     font-size: inherit;
-    margin: 1rem; }
+    margin: 1rem;
+    transition: all .2s; }
+    .checkAnswersPopup__button:hover {
+      background-color: #262626;
+      color: #fd9644;
+      cursor: pointer; }
     .checkAnswersPopup__button:focus {
       outline: none; }
     @media only screen and (max-width: 600px) {

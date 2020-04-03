@@ -328,7 +328,7 @@ body {
     margin: auto;
     border-radius: 5px;
     padding: 5rem;
-    color: #fd9644;
+    color: #333;
     font-size: 2.5rem;
     box-shadow: 0 1rem 2rem #fd9644;
 
@@ -371,6 +371,13 @@ body {
     color: currentColor;
     font-size: inherit;
     margin: 1rem;
+    transition: all .2s;
+
+    &:hover {
+      background-color: darken(#333, 5%);
+      color: #fd9644;
+      cursor: pointer;
+    }
 
     &:focus {
       outline: none;
@@ -401,7 +408,7 @@ body {
     margin: auto;
     border-radius: 5px;
     padding: 5rem;
-    color: #fd9644;
+    color: #333;
     font-size: 2.5rem;
     box-shadow: 0 1rem 2rem #fd9644;
     line-height: 1.6;
@@ -437,6 +444,13 @@ body {
     color: currentColor;
     font-size: inherit;
     margin: 1rem;
+    transition: all .2s;
+
+    &:hover {
+      background-color: darken(#333, 5%);
+      color: #fd9644;
+      cursor: pointer;
+    }
 
     &:focus {
       outline: none;
