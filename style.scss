@@ -69,6 +69,7 @@ body {
     margin: 3rem;
     font-family: 'Tangerine', cursive;
     font-weight: 700;
+    color: #fff;
 
     @media only screen and (max-width: 900px) {
       margin: 2rem;
@@ -500,9 +501,14 @@ body {
     display: inline-block;
     -webkit-transition: all .2s;
     transition: all .2s;
+    color: cyan;
 
     &:hover {
       transform: scale(1.2) rotate(10deg);
+      color: #7ed56f;
+    }
+
+    @media (hover: none) {
       color: #7ed56f;
     }
   }

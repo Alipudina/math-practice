@@ -54,7 +54,8 @@ body {
     font-size: 6rem;
     margin: 3rem;
     font-family: 'Tangerine', cursive;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #fff; }
     @media only screen and (max-width: 900px) {
       .form__heading {
         margin: 2rem; } }
@@ -379,10 +380,14 @@ body {
     text-transform: uppercase;
     display: inline-block;
     -webkit-transition: all .2s;
-    transition: all .2s; }
+    transition: all .2s;
+    color: cyan; }
     .footer__link:link:hover, .footer__link:visited:hover {
       transform: scale(1.2) rotate(10deg);
       color: #7ed56f; }
+    @media (hover: none) {
+      .footer__link:link, .footer__link:visited {
+        color: #7ed56f; } }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
