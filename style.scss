@@ -540,3 +540,65 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+
+// test ++++++++++++++++++++
+
+#radio-group {
+  display: flex;
+  // width: 50%;
+  // flex-wrap: wrap;
+  justify-content: space-around;
+  // align-items: center;
+  // position: relative;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+}
+
+
+input[type="radio"] {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+
+  @media only screen and (max-width: 900px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+ 
+
+
+
+.labels {
+  display: inline-block;
+
+  color: brown;
+  font-size: 3rem;
+  position: absolute;
+  // top: 20%;
+  right: 28%;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.7rem;
+  }
+}
+
+.last-labels {
+  right: 10%;
+  // color: yellowgreen;
+}

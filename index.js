@@ -25,8 +25,29 @@ btn.addEventListener('click', ev => {
   if (name.length>2 && quantity) {
     questionsContainer.innerHTML= `<h3 class="form__heading">Hallo ${name}</h3>`;
 
+    // start radios section +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    const radios = document.querySelectorAll('input[type="radio"]');
+    // const radios = document.querySelectorAll('.input-container').input;
+    let radiosNumber = 10;
+
+    for (let i = 0; i < radios.length; i++) {
+      // console.log(radios[i].value);
+      if (radios[i].checked) {
+        console.log(radios[i].value);
+        radiosNumber = radios[i].value;
+      }
+
+    }
+
+// end of test +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     for (let i=1; i<=quantity; i++) {
       let firstNumber= Math.ceil(Math.random() * 10);
+      // added ++++++
+      while (firstNumber > radiosNumber) {
+        firstNumber= Math.ceil(Math.random() * 10);
+      }
+      // finish +++++
       let secondNumber= Math.ceil(Math.random() * 10);
       let rightAnswer= firstNumber*secondNumber;
       rightAnswerArray.push(rightAnswer);
