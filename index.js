@@ -58,7 +58,7 @@ btn.addEventListener('click', ev => {
       questionsContainer.innerHTML+= question;
     }
 
-    document.querySelector('.first-name').value='';
+    // document.querySelector('.first-name').value='';
     document.querySelector('.questions').value='';
     submitQuestionsContainer.style.display= 'block';
     mainRightAnswerArray=rightAnswerArray
